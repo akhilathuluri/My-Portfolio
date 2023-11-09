@@ -1,0 +1,26 @@
+.btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (max-width: 650px) {
+  .btn-primary {
+    font-size: 0.875rem;
+    padding: 12.5px 16px;
+  }
+}

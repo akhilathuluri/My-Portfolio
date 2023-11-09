@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+    <nav id="desktop-nav">
+        <div class="logo">Athuluri Akhil</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./#about">About</a></li>
+            <li><a href="./#experience">Experience</a></li>
+            <li><a href="./#projects">Projects</a></li>
+            <li><a href="./LinkTree/index.html">My Links</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Athuluri Akhil</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+
+    <div id="blog-posts" class="container">
+        <!-- Blog posts will be displayed here -->
+    </div>
+
+    
+      
+      
+
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="./LinkTree/index.html">My Links</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Athuluri Akhil. All Rights Reserved.</p>
+      </footer>
+      <div class="custom-cursor"></div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F5Y0TCKRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-1F5Y0TCKRT');
+    </script>
+    <script src="devto-blogs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

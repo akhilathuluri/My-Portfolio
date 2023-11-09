@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+        .post {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .post {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="desktop-nav">
+        <div class="logo">Athuluri Akhil</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./#about">About</a></li>
+            <li><a href="./#experience">Experience</a></li>
+            <li><a href="./#projects">Projects</a></li>
+            <li><a href="./LinkTree/index.html">My Links</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Athuluri Akhil</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+
+      <div id="blog-posts">
+        <!-- Blog posts will be displayed here -->
+    </div>
+
+    
+      
+      
+
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="./LinkTree/index.html">My Links</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Athuluri Akhil. All Rights Reserved.</p>
+      </footer>
+      <div id="page-views">
+        <p id="views">Page Views: Loading...</p>
+      </div>
+      <div id="ip-info">
+        <p id="ip-address">IP Address: Loading...</p>
+        <p id="location">Location: Loading...</p>
+        <p id="isp">ISP: Loading...</p>
+      </div>
+      <div class="custom-cursor"></div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F5Y0TCKRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-1F5Y0TCKRT');
+    </script>
+    <script>
+        const apiKey = '14cfd522-aef7-4566-bbd1-266bca89f91d';
+        const username = 'athuluriakhil';
+        const endpoint = `https://api.hashnode.com/`;
+
+        fetch(`${endpoint}blog/list/${username}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'API-Key': apiKey
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const blogPosts = document.getElementById('blog-posts');
+
+            data.data.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+
+                const postTitle = document.createElement('h3');
+                postTitle.textContent = post.title;
+
+                const postSlug = document.createElement('p');
+                postSlug.textContent = post.slug;
+
+                const postLink = document.createElement('a');
+                postLink.href = post.url;
+                postLink.textContent = 'Read More';
+
+                postElement.appendChild(postTitle);
+                postElement.appendChild(postSlug);
+                postElement.appendChild(postLink);
+                blogPosts.appendChild(postElement);
+            });
+        })
+        .catch(error => console.error('Error fetching Hashnode articles:', error));
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

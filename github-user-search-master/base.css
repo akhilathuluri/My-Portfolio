@@ -1,0 +1,188 @@
+* {
+  transition: all 0.2s ease-in-out;
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: 16px;
+
+  /* Typography */
+  --h1: 1.625rem;
+  --h1-lh: 38px;
+
+  --h2: 1.375rem;
+  --h2-lh: 33px;
+
+  --h3: 1rem;
+  --h3-lh: 24px;
+
+  --h4: 0.813rem;
+  --h4-lh: 20px;
+
+  --body: 0.938rem;
+  --body-lh: 25px;
+
+  --body-s: 0.813rem;
+  --body-s-lh: 18px;
+
+  /* Other */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  min-height: 100vh;
+  padding: 75px 96px;
+
+  /* Lightmode */
+  --primary: #0079ff;
+  --primary-hover: #60abff;
+
+  --txt-high-contrast: #2b3442;
+  --txt-mid-contrast: #4b6a9b;
+  --txt-low-contrast: #697c9a;
+
+  --txt-search: #222731;
+  --txt-search-placeholder: #4b6a9b;
+
+  --bg: #f6f8ff;
+  --bg-secondary: #fefefe;
+
+  --theme-switch-btn-hover: #222731;
+
+  /* Neutral */
+  --error: #f74646;
+}
+
+body.dark-theme {
+  background-color: var(--bg);
+
+  /* Darkmode */
+  --primary: #0079ff;
+  --primary-hover: #60abff;
+
+  --txt-high-contrast: #fff;
+  --txt-mid-contrast: #ffff;
+  --txt-low-contrast: #fff;
+
+  --txt-search: #fff;
+  --txt-search-placeholder: #fff;
+
+  --bg: #141d2f;
+  --bg-secondary: #1e2a47;
+
+  --theme-switch-btn-hover: #90a4d4;
+
+  /* Neutral */
+  --error: #f74646;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 730px;
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--h1);
+  line-height: var(--h1-lh);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--h2);
+  line-height: var(--h2-lh);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--h3);
+  line-height: var(--h3-lh);
+  font-weight: 400;
+}
+
+h4 {
+  font-size: var(--h4);
+  line-height: var(--h4-lh);
+  font-weight: 400;
+}
+
+.body {
+  font-size: var(--body);
+  line-height: var(--body-lh);
+  font-weight: 400;
+}
+
+.body-s {
+  font-size: var(--body-s);
+  line-height: var(--body-s-lh);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+a:focus {
+  outline: dotted #697c9a 1.75px;
+}
+
+body.dark-theme button:focus,
+body.dark-theme input:focus,
+body.dark-theme a:focus {
+  outline: dotted #90a4d4 1.75px;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+@media (max-width: 650px) {
+  :root {
+    /* Typography */
+    --h1: 1rem;
+    --h1-lh: 24px;
+
+    --h2: 1rem;
+    --h2-lh: 24px;
+
+    --h3: 0.813rem;
+    --h3-lh: 19px;
+
+    --h4: 0.688rem;
+    --h4-lh: 16px;
+
+    --body: 0.813rem;
+    --body-lh: 25px;
+  }
+
+  body {
+    padding: 32px 24px 80px 24px;
+  }
+}
