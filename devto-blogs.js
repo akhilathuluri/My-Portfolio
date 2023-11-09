@@ -1,5 +1,5 @@
 // Replace 'YOUR_DEVTO_API_KEY' with your actual dev.to API key
-const apiKey = 'cPNvcFcL2FNvirtrZzwt9Bek';
+const apiKey = 'cPNvcFczwt9Bek';
 const username = 'akhilathuluri';
 
 const devtoEndpoint = `https://dev.to/api/articles?username=${username}`;
