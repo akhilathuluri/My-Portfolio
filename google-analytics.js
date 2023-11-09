@@ -1,5 +1,5 @@
 // Replace with your own Tracking ID
-const trackingId = 'G-1F5Y0TCKRT';
+const trackingId = 'G-1F5KRT';
 
 gapi.analytics.ready(function() {
     gapi.analytics.auth.authorize({
