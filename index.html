@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/9d0d63b694b0f7282b3347b0/script.js"></script> <!-- End cookieyes banner -->
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,16 @@
     <script src="script.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+        document.title = 'Come back to My portfolio!';
+    } else {
+        document.title = 'Akhils Portfolio'; // Restore the original title when the tab is in focus
+    }
+});
+
+    </script>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -34,6 +44,8 @@
           <span></span>
           <span></span>
           <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -48,7 +60,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/Myphoto1-profile.png" alt="profile picture" />
+        <img src="./assets/Myphoto1-profile.png" alt="John Doe profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -57,7 +69,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/Akhil_Resume.pdf')"
+            onclick="window.open('./assets/resume-example.pdf')"
           >
             Download CV
           </button>
@@ -271,6 +283,7 @@
             </div>
           </div>
         </div>
+        <h4>My Certifications?<a href="./mycerti.html">Click Here</a></h4>
       </div>
       <img
         src="./assets/arrow.png"
