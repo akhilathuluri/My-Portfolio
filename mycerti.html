@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akhil's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Athuluri Akhil</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./LinkTree/index.html">My Links</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./github-user-search-master/index.html">Github Search</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Athuluri Akhil</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="./index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="./projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="./LinkTree/index.html" onclick="toggleMenu()">My Links</a></li>
+          <li><a href="./blog.html" onclick="toggleMenu()">Blog</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="repos-container" id="repos">
+        <div class="repo-card">
+            <h4>MLSA On-boarding Certificate</h4>
+            <button
+            onclick="window.open('./certificates/On-board.pdf')"
+          >
+          <img src="./assets/mlsaonboard.png" alt="MLSA On-boarding Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>MLSA Alpha Certificate</h4>
+            <button
+            onclick="window.open('./certificates/Alpha.pdf')"
+          >
+          <img src="./assets/mlsaalpha.png" alt="MLSA Alpha Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>MLSA Beta Certificate</h4>
+            <button
+            onclick="window.open('./certificates/beta.pdf')"
+          >
+          <img src="./assets/mlsabeta.png" alt="MLSA Beta Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+            <h4>Open Data - Telangana</h4>
+            <button
+            onclick="window.open('./certificates/9069-datalabs.pdf')"
+          >
+          <img src="./assets/opendata.png" alt="MLSA On-boarding Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>Solana Blockchain Developer Program.</h4>
+            <button
+            onclick="window.open('./certificates/Solana.pdf')"
+          >
+          <img src="./assets/solana.png" alt="MLSA Beta Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>Introduction to Cybersecurity.</h4>
+            <button
+            onclick="window.open('./certificates/cyber.pdf')"
+          >
+          <img src="./assets/cyber.png" alt="cisco Cybersecurity Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>Technical Support Fundamentals.</h4>
+            <button
+            onclick="window.open('./certificates/technical.pdf')"
+          >
+          <img src="./assets/technical.png" alt="git-and-github Certificate" width="241" height="209"/>
+          </button>
+        </div>
+        <div class="repo-card">
+          <h4>Introduction Git and Github.</h4>
+            <button
+            onclick="window.open('./certificates/git-and-github.pdf')"
+          >
+          <img src="./assets/git.png" alt="git-and-github Certificate" width="241" height="209"/>
+          </button>
+        </div>
+    </div>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:athuluriakhil@gmail.com">Mail Me</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/athuluriakhil/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./LinkTree/index.html">My Links</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Athuluri Akhil. All Rights Reserved.</p>
+    </footer>
+    <div class="custom-cursor"></div>
+    
+    <script>
+      var typed = new Typed(".auto", {
+            strings: ["Frontend Developer", "Content Creator","Student Ambassador"],
+            typeSpeed: 50,
+            backSpeed: 75,
+            loop: true,
+          });
+    </script>
+    <script src="script.js"></script>
+    <script src="google-analytics.js"></script>
+  </body>
+</html>
